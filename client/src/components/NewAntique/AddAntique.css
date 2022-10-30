@@ -1,0 +1,8 @@
+.AddAntique-page-container {
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px solid blue; */
+    /* margin-top: 500px; */
+}

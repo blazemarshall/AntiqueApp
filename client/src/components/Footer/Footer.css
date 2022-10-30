@@ -1,0 +1,16 @@
+.footer-container {
+    /* border: 5px solid red; */
+    position:fixed;
+    bottom: 0px;
+
+    /* height: 100px; */
+    width: 100%;
+    margin: 0;
+    background-color: aliceblue;
+    display: flex;
+    /* justify-self: ; */
+    justify-content: center;
+}
+.footer-container > h1 {
+    margin: 0%;
+}

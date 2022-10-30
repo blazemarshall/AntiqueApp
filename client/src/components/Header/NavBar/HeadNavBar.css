@@ -1,0 +1,39 @@
+
+
+
+
+.HeadNavBar-container {
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 15px white;
+    opacity: .8;
+    border-radius: 15px;
+    /* background-image: repeating-radial-gradient( black ,gold 1500px); */
+}
+
+.HeadNavBar-btn {
+    justify-content: center;
+    background-color: var(--maroon-color);
+    /* width: 100%; */
+    display: flex;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+}
+.HeadNavBar-btn:hover {
+    background-color: var(--dk-red-color);
+}
+
+.search-btn{
+    display: flex;
+    border-radius: 10px 10px 50px 50px ;
+    justify-content: center;
+    background-color:var(--dk-gold-color);
+    width: 100%;
+    align-items: center;
+    height: 35px;
+}
+.search-btn:hover {
+    background-color: var(--red-color);
+}
