@@ -1,13 +1,17 @@
 import './Header.css';
 import { Link } from 'react-router-dom';
 import HeadNavBar from './NavBar/HeadNavBar';
-export default function Header({handlePrint}){
+export default function Header({handlePrint,handleSearchClick}){
     return (
         <div className={'header-container'}>
             <div>
 
             <h1 className='header-title'>Dr. K's Treasure Bay</h1>
-            <HeadNavBar handlePrint={handlePrint} />
+            <HeadNavBar handlePrint={handlePrint} 
+                        handleSearchClick={handleSearchClick}
+                        // searchClicked={searchClicked}
+                        // setSearchClicked={setSearchClicked}
+                        />
 
             </div>
             </div>
