@@ -61,6 +61,8 @@
 }
 .inputList-input:focus {
     background-color: var(--lt-color);
+    color: black;
+    font-weight: bolder;
 }
 
 .inputList-labels-list{

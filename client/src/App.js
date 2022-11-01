@@ -8,41 +8,62 @@ import { listAntiques } from './utils/api';
 import AddAntique from './components/NewAntique/AddAntique';
 import NotFound from './components//NotFound'
 import EditAntique from './components/EditAntique/EditAntique';
-import SearchAntique from './components/SearchAntique/SearchAntique';
 import {useReactToPrint} from 'react-to-print'
+import SearchFunction from './components/ATable/SearchFunction';
 
 export default function App() {
-  const [antiquesError,setAntiquesError]= useState([])
-  const [antiques,setAntiques]= useState([])
-  const ref = useRef()
+//--------state---------------------------------------------
+const [antiquesError,setAntiquesError]= useState([])
+const [antiques,setAntiques]= useState([])
+
+const ref = useRef()
+
+//--------------------------------------------------
+useEffect(()=>{
+  function loadAntiques(){
+    const ac = new AbortController();
+    setAntiquesError(null);
+    listAntiques(ac.signal)
+     .then(setAntiques)
+     .catch(setAntiquesError)
+      return () => ac.abort()}
+      loadAntiques();
+    },[]
+)
+
+//------------------search-Functions---------------------
+
+const [searchClicked,setSearchClicked] = useState(false);
+
+function handleSearchClick(){
+  setSearchClicked(!searchClicked)
+}
+//----------------------------------------------------
 
 
-  useEffect(()=>{
-    function loadAntiques(){
-      const ac = new AbortController();
-      setAntiquesError(null);
-      listAntiques(ac.signal)
-       .then(setAntiques)
-       .catch(setAntiquesError)
-        return () => ac.abort()}
-        loadAntiques();
-      },[]
-  )
+
   //    instrumental to file downloads
-  console.log(JSON.stringify(antiques,null,2),"antiques from db")
+  // console.log(JSON.stringify(antiques,null,2),"antiques from db")
+
+//--------------render--------------------------------------
   return (
     <div className={"app-container"}>
     <Router>
 
     <div>
-      <Header />
+      <Header
+      handleSearchClick={handleSearchClick}
+      />
+      {/* {searchClicked && <SearchFunction antiques={antiques}/>} */}
       <div className='content-wrapper'>
       <Routes >
-        <Route exact path="/" element={<AntiqueTable antiques={antiques} />} />
+        <Route exact path="/" element={<AntiqueTable 
+                                          searchClicked={searchClicked}
+                                          antiques={antiques}
+                                          />} />
         <Route exact path="/antiques/add-antique" element={<AddAntique />} />
-        <Route exact path="/antiques/search-antique" element={<SearchAntique />} />
         <Route exact path='/antiques/:id/edit-antique' element={<EditAntique />} />
-        <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} />} />
+        <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} searchClicked={searchClicked} />} />
         {/* <Route path='/antiques/:id' element={<SingleAntique />} /> */}
         <Route exact path="*" element={<NotFound  />} />
       </Routes>

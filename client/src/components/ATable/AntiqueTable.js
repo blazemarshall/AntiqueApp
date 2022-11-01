@@ -5,13 +5,19 @@ import { deleteAntique } from '../../utils/api';
 import {useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import TableCommands from './TableCommands';
-export default function AntiqueTable({antiques}){
+
+
+export default function AntiqueTable({antiques,searchClicked,SearchAntiques}){
 
 //------------imports-group----------------------
 
     const ref= useRef();
 const navigate = useNavigate()
 const [deleteErr,setDeleteErr] = useState(null);
+const [searchParams,setSearchParams] = useState("");
+
+//----------Searches-through-table--------------
+// function searchForAntique(searchParams){}
 
 //-----------deletes-single-antique-------------
 async function deleteAntiqueHandler(antiqueName){
@@ -46,7 +52,7 @@ const antiquesList =antiques?.map((antique,index)=>{
 
             <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>delete</button>
             <button className='table-btns-container-button edit-btn' 
-            onClick={()=>navigate(`/antiques/${id}/edit`)}
+            onClick={()=>navigate(`/antiques/${id}/edit-antique`)}
             >Edit</button>
             </div>
         </td>
@@ -89,6 +95,12 @@ const antiquesList =antiques?.map((antique,index)=>{
     return(
         
         <div className='page-container'>
+        <TableCommands handlePrint={handlePrint}
+                       antiques={antiques}
+                       searchClicked={searchClicked}
+                       searchParams={searchParams}
+                       SearchAntiques={SearchAntiques}
+                       />
         <div className={"table-container"}>
            <table className={"table"} ref={ref}> 
             <thead className={'table-head'}>
@@ -124,7 +136,6 @@ const antiquesList =antiques?.map((antique,index)=>{
            
     
     </div>
-    <TableCommands handlePrint={handlePrint}/>
         </div>
     )
 }
