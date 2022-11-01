@@ -3,12 +3,11 @@ import SearchResultItem from "./SearchResultItem"
 
 
 export default function SearchResults({filteredAntiques}){
- console.log(filteredAntiques,"SearchResult Orig")
     const filtered = filteredAntiques?.map(antique => {
-    console.log(antique,"map SearchFRESULTS")
-        return
-    <SearchResultItem key={antique.id} antique={antique}/>}
-    )
+        return(
+    <SearchResultItem key={antique.id} antique={antique}/>
+    )})
+    console.log(filtered,"filtered")
     return (
         <div>search Results
             <table>

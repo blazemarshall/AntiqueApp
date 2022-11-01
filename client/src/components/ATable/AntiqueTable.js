@@ -52,7 +52,7 @@ const antiquesList =antiques?.map((antique,index)=>{
 
             <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>delete</button>
             <button className='table-btns-container-button edit-btn' 
-            onClick={()=>navigate(`/antiques/${id}/edit`)}
+            onClick={()=>navigate(`/antiques/${id}/edit-antique`)}
             >Edit</button>
             </div>
         </td>

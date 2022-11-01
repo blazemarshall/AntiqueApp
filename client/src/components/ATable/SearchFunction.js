@@ -5,7 +5,6 @@ import Scroll from './Scroll'
 
 
 export default function SearchFunction({antiques}){
-    console.log("antiques,SearchFunc",antiques)
     const [searchField,setSearchField] = useState('')
 
 const handleSearchChange = e => {
@@ -13,39 +12,22 @@ const handleSearchChange = e => {
 }
 
 const filteredAntiques = antiques?.filter((antique)=>{
-    console.log(antique,"show me damnit")
     return (antique.name.toLowerCase().includes(searchField.toLowerCase()) 
     )
 })
-
-// function SearchResults(){
-//     return (
-       
-//     )
-// }
-
-
-//  function SearchAntiques(searchQuery){
-//   setAntiques()
-  
-//  }
 
 
     return(
         <div className="searchFunction-container">Search
             <input 
-            // type="text" 
             placeholder="Type in name"
-            // name="search"
-            // id="search"
             type="search"
             onChange={handleSearchChange}
-            // value={searchField}
             aria-label='search for antique input box'
             />
-        {/* <Scroll> */}
+        <Scroll>
             <SearchResults filteredAntiques= {filteredAntiques} />
-        {/* </Scroll> */}
+        </Scroll>
         </div>
     )
 }

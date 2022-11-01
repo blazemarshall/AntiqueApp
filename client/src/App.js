@@ -63,7 +63,7 @@ function handleSearchClick(){
                                           />} />
         <Route exact path="/antiques/add-antique" element={<AddAntique />} />
         <Route exact path='/antiques/:id/edit-antique' element={<EditAntique />} />
-        {/* <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} />} /> */}
+        <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} searchClicked={searchClicked} />} />
         {/* <Route path='/antiques/:id' element={<SingleAntique />} /> */}
         <Route exact path="*" element={<NotFound  />} />
       </Routes>

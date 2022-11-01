@@ -27,8 +27,10 @@
 
 .content-wrapper {
     overflow:scroll;
-    min-height: 100%;
+    height: 50vh;
+    max-height: 100%;
     padding:0 1.5rem;
+    /* margin-top: 100px; */
 }
 
 .button {

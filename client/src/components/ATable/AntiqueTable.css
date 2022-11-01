@@ -120,16 +120,11 @@ td {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
-    /* background-color: blue; */
-    /* margin-top: 0/; */
-    /* margin-bottom: 100px; */
-    /* min-height: 500px; */
-    /* background-color: aliceblue; */
 }
 
 .tableCommands-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: var(--dk-color);
     opacity: .8;
@@ -162,7 +157,7 @@ td {
 .searchFunction-container {
     color:white;
     display: flex;
-    width: 50%;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
     padding: 50px,0;
