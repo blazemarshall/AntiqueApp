@@ -10,6 +10,7 @@ import NotFound from './components//NotFound'
 import EditAntique from './components/EditAntique/EditAntique';
 import {useReactToPrint} from 'react-to-print'
 import SearchFunction from './components/ATable/SearchFunction';
+import SingleAntique from './components/SingleAntique/SingleAntique';
 
 export default function App() {
 //--------state---------------------------------------------
@@ -64,7 +65,7 @@ function handleSearchClick(){
         <Route exact path="/antiques/add-antique" element={<AddAntique />} />
         <Route exact path='/antiques/:id/edit-antique' element={<EditAntique />} />
         <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} searchClicked={searchClicked} />} />
-        {/* <Route path='/antiques/:id' element={<SingleAntique />} /> */}
+        <Route path='/antiques/:id' element={<SingleAntique />} />
         <Route exact path="*" element={<NotFound  />} />
       </Routes>
       </div>

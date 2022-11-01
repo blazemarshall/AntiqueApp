@@ -55,3 +55,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Scroll bar elements  */
+
+/* *::webkit-scollbar {} */
+
+*::webkit-scrollbar-thumb {
+  background-image: radial-gradient(rgb(40, 188, 188) 1%,teal 10%,purple);
+  border-radius: 5px;
+}
+*::-webkit-scrollbar-button{
+
+  background-image: radial-gradient(rgb(40, 188, 188) 1%,teal 10%,purple);
+}
+*::-webkit-scrollbar-corner{}
+*::-webkit-scrollbar-track{}
+*::-webkit-scrollbar-track-piece{}

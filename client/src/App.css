@@ -26,7 +26,7 @@
 }
 
 .content-wrapper {
-    overflow:scroll;
+    /* overflow:scroll; */
     height: 50vh;
     max-height: 100%;
     padding:0 1.5rem;
@@ -40,3 +40,5 @@
 .body{
     /* max-height: 30px; */
 }
+
+
