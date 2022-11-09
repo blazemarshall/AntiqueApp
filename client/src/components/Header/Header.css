@@ -1,31 +1,26 @@
 .header-container {
 display: flex;
-justify-content: center;
-/* top:0px; */
-/* margin-bottom: 100px; */
-/* height: 100px; */
-/* width: 100%; */
-/* margin-top: 5px; */
-/* border: 5px solid red ; */
-
-/* position: relative; */
-/* background-image:url('../../images/lamp.svg') ; */
-/* background-size: cover; */
-/* background-position: center; */
-/* background-repeat: no-repeat; */
-padding: 50px 0;
-/* border-radius: 50%; */
+justify-content:center;
+opacity: .9;
+top:0px;
 }
 .header-title {
-    /* color:gold; */
-    color:rgb(210, 157, 21);
-    /* text-shadow: 0px 0px 10px gold; */
+    display: flex;
+    box-shadow:0 0 100px var(--jsplit-5) inset;
+    justify-content: center;
+    color:var(--complementary-gold);
     background-color:black;
     opacity: .8;
-    /* background-image: repeating-radial-gradient(black ,gold 5px); */
-    border-radius: 10px;
-    box-shadow: 0 0 15px white ;
-    /* font-weight: bold; */
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px;
+    width: auto;
+    height: auto;
+    font-family:'Rock Salt';
+    /* Verdana, Geneva, Tahoma, sans-serif; */
+    padding: 50px;
+}
+.header-title-container{
+    /* border:3px solid yellow; */
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

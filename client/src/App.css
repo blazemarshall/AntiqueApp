@@ -3,7 +3,7 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
-    height:700px;
+    /* height:700px; */
 }
 @media screen and (max-width:500px) {
     .content-wrapper{
@@ -25,20 +25,31 @@
     }
 }
 
+
 .content-wrapper {
     /* overflow:scroll; */
-    height: 50vh;
+    /* height: 50vh; */
     max-height: 100%;
     padding:0 1.5rem;
-    /* margin-top: 100px; */
+    margin-top: 100px;
 }
+
+/* general styling */
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .button {
     display: flex;
     justify-content: center;
 }
-.body{
-    /* max-height: 30px; */
+.shortened{
+    overflow-x:hidden;
 }
-
-

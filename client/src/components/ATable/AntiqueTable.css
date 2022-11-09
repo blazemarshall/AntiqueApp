@@ -1,59 +1,107 @@
 
 @media screen and (max-width:500px) {
-    /* .table{ */
-        /* height: 220px; */
-        /* display: block; */
-        /* margin:20px 0; */
-        /* margin-bottom: 500px; */
-    /* } */
-    /* .tableRow{ */
-        /* height: 25px; */
-    /* } */
+
 }
 
-td{
-    height:30;
-    /* overflow: hidden; */
-}
+
 
 .table-container {
     /* border:3px solid yellow; */
-    display: flex;
+    display: block;
+    overflow-x: scroll;
+    /* margin: 0 500px; */
     justify-content: center;
+    margin-bottom: 500px;
     align-items: center;
-    /* margin-top: 200px; */
-    /* flex-wrap: wrap; */
-    /* height: 200px; */
+}
+.table-body {
+    overflow-y: scroll;
+    display: f;
+    /* border:3px solid yellow; */
+    /* padding: 50px; */
+    /* height: 100%; */
 }
 .table {
+    /* border:3px solid yellow; */
     border-collapse: collapse;
-    /* table-layout:fixed; */
     opacity: .8;
-    /* height: 100%; */
-    /* margin: 300px 30px;  */
-    display: block;
+    width: auto;
+    /* display: block; */
     overflow-x: auto;
-    /* background-color:var(--dk-color); */
 }
 
-.table thead tr{
+.table-head-row{
     background-color: var(--lt-dk-color);
-    color:white
+    color:white;
+    font-family: "Walter Turncoat";
+    /* margin: 4px; */
 }
 
-.table tbody tr{
-    max-height: 30px;
+.table-body-row{
+    /* max-height: 30px; */
     background-color: var(--dk-color);
-    overflow: scroll;
-    height:20px;
+    /* overflow: scroll; */
+    /* height:auto; */
+    width: auto;
 }
 
+.table-detail-name{
+    left:0px;
+    border: 1px solid black;
+    opacity: 1;
+    background-color: var(--lt-dk-color);
+    color:white;
+    position:sticky;
+}
+.table-detail-name:active{transform: scale(.9);}
+.table-detail-name:hover{
+    background-color: var(--jsplit-1);
+}
+.table-detail-name:visited{
+    color:var(--jsplit-3)
+}
 
+.table-detail {
+    /* overflow-y:hidden; */
+    padding: 0 15px;
+    height:30px;
+    max-height: 50px;
+    width: auto;
+    opacity: 1;
+    color: white;
+    border:1px solid var(--dk-red-color);
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* single antique table styling */
+.single-antique-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.single-antique-head-th{
+ padding:5px;
+ border:1px solid black;
+ height: 35px;
+}
+.single-antique-td{
+    display: flex;
+    padding:15px;
+    height:35px ;
+    align-items: center;
+}
+
+/* button styling */
 
 .table-btns-container > button {
     border-radius: 5px;
     min-width: 100%;
-    border:2px solid yellow ;
+    /* border:2px solid yellow ;S */
     padding:5px;
 }
 .add-btn {
@@ -64,6 +112,7 @@ td{
     border-radius: 50px 50px 0 0;
     opacity: .9;
     box-shadow: 0 0 15px white;
+    
 }
 .add-btn:link {
     color:white;
@@ -93,77 +142,6 @@ td{
     background-color: var(--lt-gold-color);
 }
 
-.nameTd {
 
-    
-    left:0px;
-    opacity: 1;
-    background-color: var(--lt-dk-color);
-    color:white;
-    position:sticky;
-}
-td {
-    overflow-y:hidden;
-    /* background-color: black; */
-    /* display: table-cell; */
-    padding: 5px;
-    opacity: 1;
-    color: white;
-    /* table-layout: fixed; */
-     /* height: 10px; */
-    /* max-height: 5px; */
-    /* margin: 0px; */
-    border:1px solid var(--dk-red-color);
-}
 
-.page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tableCommands-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--dk-color);
-    opacity: .8;
-    border-radius:  30px 30px 0 0;
-}
-
-.tableCommands-btn {
-    background-color: var(--maroon-color);
-    padding: 5px 10px;
-    border-radius: 15px;
-}
-.tableCommands-btn:hover {
-    background-color: var(--dk-red-color);
-}
-.search-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--dk-color);
-    opacity: .9;
-    border-radius: 20px;
-    color: white;
-}
-.search-input {
-    border-radius: 20px;
-    height: 20px;
-    margin-left: 5px;
-    border: 3px solid yellow;
-}
-.searchFunction-container {
-    color:white;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    flex-direction: column;
-    padding: 50px,0;
-}
-.search-scroll-container {
-overflow-y:scroll;
-max-height: 200px;
-width: 100%s;
-}
+/* table commands */

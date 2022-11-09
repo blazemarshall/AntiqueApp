@@ -3,7 +3,6 @@ import "./HeadNavBar.css";
 import React,{useState} from 'react'
 import {Link,} from 'react-router-dom'
 export default function HeadNavBar({handlePrint,handleSearchClick}){
- 
     return (
     <div className='HeadNavBar-container'>
       <Link className="HeadNavBar-btn" to="/antiques">Home</Link>
@@ -11,6 +10,7 @@ export default function HeadNavBar({handlePrint,handleSearchClick}){
       <button to='/antiques/search-antique'
       className='HeadNavBar-btn'
       onClick={()=>handleSearchClick()} >Search for Antique</button>
-      <button className="HeadNavBar-btn" onClick={handlePrint}>Print</button>
+      {/* <button className="HeadNavBar-btn" onClick={""}>Download</button> */}
+      {/* <button className="HeadNavBar-btn" onClick={""}>Upload</button> */}
     </div>)
 }

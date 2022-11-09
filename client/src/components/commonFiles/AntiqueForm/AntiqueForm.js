@@ -51,7 +51,7 @@ const changeHandler = e => {
     </div>
 
     <div className="inputList-inputs-list" >
-        {editBool && <input id="id"         name="id"          type="text" placeholder="Id"          className="inputList-input" onChange={changeHandler} value={form.id}    maxLength="50"    aria-label="id input box" readOnly/>}
+        {editBool && <input id="id"  name="id"    type="text" placeholder="Id"          className="inputList-input" onChange={changeHandler} value={form.id}          maxLength="50"    aria-label="id input box" readOnly/>}
         <input id="name"       name="name"        type="text" placeholder="Name"        className="inputList-input" onChange={changeHandler} value={form.name}        maxLength="50"    aria-label="name input box" />
         <input id="category"   name="category"    type="text" placeholder="Category"    className="inputList-input" onChange={changeHandler} value={form.category}    maxLength="50"    aria-label="category input box" />
         <input id="quantity"   name="quantity"    type="text" placeholder="Quantity"    className="inputList-input" onChange={changeHandler} value={form.quantity}    maxLength="50"    aria-label="quantity input box" />

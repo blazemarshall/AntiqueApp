@@ -4,25 +4,31 @@
 
 .HeadNavBar-container {
     display: flex;
-    justify-content: space-around;
-    box-shadow: 0 0 15px white;
-    opacity: .8;
-    border-radius: 15px;
+    justify-content: center;
+    box-shadow: 0px 50px 150px var(--lt-color),0 0 1px var(--lt-color) inset;
+    opacity: .9;
+    background-color: black;
+    /* border-radius: 15px; */
     /* background-image: repeating-radial-gradient( black ,gold 1500px); */
 }
 
 .HeadNavBar-btn {
     justify-content: center;
-    background-color: var(--maroon-color);
+    background-color: var(--jsplit-2);
+    color: var(--jsplit-4);
     /* width: 100%; */
     display: flex;
-    border-radius: 10px;
-    color: white;
+    border-radius: 5px;
     text-decoration: none;
-    padding: 5px;
+    padding: 0 5px;
+    margin: 0 5px;
+    font-family: 'Patrick Hand SC';
+    font-size: large;
+
 }
 .HeadNavBar-btn:hover {
-    background-color: var(--dk-red-color);
+    background-color: var(--jsplit-5);
+    scale: .9;
 }
 
 .search-btn{
@@ -36,4 +42,5 @@
 }
 .search-btn:hover {
     background-color: var(--red-color);
+    scale:.9;
 }

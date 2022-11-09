@@ -27,7 +27,9 @@ async function create(req,res,next){
 
 //---------------------read---------------------------------------
 async function read(req,res,next){
+    console.log('made it to service')
     const data = await service.read(req.params.antiqueId)
+    console.log(data,"service data")
     res.json({data})
 }1
 

@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
+
+
+
 :root {
 /* -colors */
   --gold-color:gold;
@@ -17,6 +21,48 @@
   --dk-red-color:rgb(92, 13, 29);
   --maroon-color:rgb(145, 15, 0);
   
+/* color schemes */
+/* analogous  */
+--analogous-color-1:rgb(212,255,13);
+--analogous-color-2:rgb(232,221,12);
+--analogous-color-gold:gold;
+--analogous-color-4:rgb(232,177,12);
+--analogous-color-5:rgb(255,170,13);
+/* monochromatic */
+/* triad */
+--triad-color-1:rgb(179,154,18);
+--triad-color-2:rgb(25,248,255);
+--triad-color-gold:gold;
+--triad-color-4:rgb(255,25,181);
+--triad-color-5:rgb(179,9,124);
+/* complementary */
+--complementary-1:rgb(179,152,0);
+--complementary-2:rgb(255,221,25);
+--complementary-gold:gold;
+--complementary-4:rgb(15,0,179);
+--complementary-5:rgb(45,25,255);
+/* split complementary */
+/* double split complementary */
+/* square */
+
+/* compound */
+--compound-color-1:rgb(171,204,20);
+--compound-color-2:rgb(137,153,61);
+--compound-color-gold:gold;
+--compound-color-4:rgb(64,98,255);
+--compound-color-5:rgb(20,102,204);
+
+/* shades */
+
+
+/* jenn's double split complement */
+--jsplit-1:rgb(14,26,46);
+--jsplit-2:rgb(112,25,1);
+--jsplit-3:rgb(122,184,167);
+--jsplit-4:rgb(233,235,216);
+--jsplit-5:rgb(222,157,0);
+
+
 
   width: auto;
   background-image: url('./images/recordPlayer.svg');
@@ -24,7 +70,16 @@
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+
 }
+button {
+  appearance: none;
+  border:none
+}
+table{
+  border-collapse: collapse;
+}
+  
 @media screen and (max-width:500px){
   body{
     /* width: 100%; */

@@ -1,16 +1,5 @@
 .inputList-container {
      display: flex; 
-    /* justify-content: space-between; */
-    /* flex-direction: row; */
-    /* margin-top: 100px; */
-    /* margin-bottom: 100px; */
-    /* flex-direction: column; */
-    
-    /* width: auto; */
-    /* height: auto; */
-    /* max-height: 80px; */
-    /* gap:0px 0px; */
-    /* border: 3px solid orange;   */
 
 }
 
@@ -22,7 +11,6 @@
     box-shadow: 0 0 15px var(--lt-color);
     opacity: .8;
     background-color: var(--dk-color);
-    /* border: 3px solid yellow;   */
 }
 .form-actual {
     display: flex;
@@ -35,14 +23,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-     /* height: 100%; */
     margin:1px;
     opacity: .9;
-     /* background-color: var(--dk-color);  */
     color:var(--gold-color);
     border-radius: 0 12px 12px 0;
-    /* padding: 2px; */
-    /* border: 3px solid yellow;  */
 }
 
 .inputList-input {
@@ -50,14 +34,10 @@
     align-items: center;
     justify-content: center;
      height: 100%;
-     /* padding: .5px; */
-    /* margin:1px; */
     opacity: .9;
      background-color: var(--dk-color); 
     color:var(--gold-color);
     border-radius: 0 12px 12px 0;
-    /* padding: 2px; */
-    /* border: 3px solid yellow;  */
 }
 .inputList-input:focus {
     background-color: var(--lt-color);
@@ -69,34 +49,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* border-radius: 15px; */
     align-items: center;
-     /* padding:3px 5px; */
-    /* height: 25px; */
     margin:1px;
      background-color: var(--dk-color);
     opacity: .9;
     color:var(--gold-color) ;
     border-radius: 12px 0 0 12px;
-    /* height: 15px; */
-     /* border: 3px solid yellow;   */
 }
 .inputList-label {
     display: flex;
     flex-direction: column;
-    /* border; */
     justify-content: center;
-    /* border-radius: 15px; */
     align-items: center;
-     /* padding:3px 5px; */
     height: 100%;
     margin:1px;
      background-color: var(--dk-color);
     opacity: .9;
     color:var(--gold-color) ;
     border-radius: 12px 0 0 12px;
-    /* height: 15px; */
-     /* border: 3px solid yellow;   */
 }
 .inputList-columns {
     display: flex;
@@ -133,4 +103,10 @@
     color: white;
     /* background-color: var(--dk-gold-color); */
 }
+.NameLink{
+    color:var(--jsplit-4)
+}
 
+.NameLink:visited {
+    color:var(--jsplit-5);
+}

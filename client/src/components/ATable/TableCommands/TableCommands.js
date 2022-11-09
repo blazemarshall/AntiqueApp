@@ -1,4 +1,4 @@
-import SearchFunction from "./SearchFunction";
+import SearchFunction from "../Search/SearchFunction";
 
 export default function TableCommands({handlePrint,searchParams,searchClicked,SearchAntiques,antiques}){
     return(

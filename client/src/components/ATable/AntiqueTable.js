@@ -1,10 +1,12 @@
-import './AntiqueTable.css'
+import './AntiqueTable.css';
+import './TableCommands/TableCommands.css';
 import {v4 as uuidv4} from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import { deleteAntique } from '../../utils/api';
 import {useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
-import TableCommands from './TableCommands';
+import NameLink from '../commonFiles/Buttons/NameLink';
+import TableCommands from './TableCommands/TableCommands';
 
 
 export default function AntiqueTable({antiques,searchClicked,SearchAntiques}){
@@ -15,7 +17,6 @@ export default function AntiqueTable({antiques,searchClicked,SearchAntiques}){
 const navigate = useNavigate()
 const [deleteErr,setDeleteErr] = useState(null);
 const [searchParams,setSearchParams] = useState("");
-
 //----------Searches-through-table--------------
 // function searchForAntique(searchParams){}
 
@@ -45,41 +46,42 @@ const antiquesList =antiques?.map((antique,index)=>{
     return(
         <tr
         key={uuidv4()}
-     className={"tableRow"}   >
-           <td>
+     className={"table-body-row"}   >
+           <td className='table-detail'>
             <div
         className='table-btns-container'>
-
-            <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>delete</button>
+            <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>Delete</button>
             <button className='table-btns-container-button edit-btn' 
             onClick={()=>navigate(`/antiques/${id}/edit-antique`)}
             >Edit</button>
             </div>
         </td>
-        <td>{id}</td>
-        <td>{quantity}</td>
-        <td className='nameTd'>{name}</td>
-        <td>{category}</td>
-        <td>{value}</td>
-        <td>{material}</td>
-        <td>{color}</td>
-        <td>{style}</td>
-        <td>{brand}</td>
-        <td>{model}</td>
-        <td>{timePeriod}</td>
-        <td>{condition}</td>
-        <td>{origin}</td>
-        <td>{purpose}</td>
-        <td>{owner}</td>
-        <td>{history}</td>
-        <td>{size}</td>
-        <td>{comment}</td>
-        <td>{id}</td>
-        <td>
+        <td className='table-detail'>{id}</td>
+        <td className='table-detail'>{quantity}</td>
+        <td
+         className='table-detail-name'><NameLink link={`/antiques/${id}`}>{name}</NameLink>
+         </td>
+        <td className='table-detail'>{category}</td>
+        <td className='table-detail'>{value}</td>
+        <td className='table-detail'>{material}</td>
+        <td className='table-detail'>{color}</td>
+        <td className='table-detail'>{style}</td>
+        <td className='table-detail'>{brand}</td>
+        <td className='table-detail'>{model}</td>
+        <td className='table-detail'>{timePeriod}</td>
+        <td className='table-detail'>{condition}</td>
+        <td className='table-detail'>{origin}</td>
+        <td className='table-detail'>{purpose}</td>
+        <td className='table-detail'>{owner}</td>
+        <td className='table-detail'>{history}</td>
+        <td className='table-detail'>{size}</td>
+        <td className='table-detail'>{comment}</td>
+        <td className='table-detail'>{id}</td>
+        <td className='table-detail'>
             <div
         className='table-btns-container'>
 
-            <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>delete</button>
+            <button className='table-btns-container-button delete-btn' onClick={()=>deleteAntiqueHandler(name)}>Delete</button>
             <button className='table-btns-container-button edit-btn' 
             onClick={()=>navigate(`/antiques/${id}/edit-antique`)}
             >Edit</button>
@@ -104,7 +106,7 @@ const antiquesList =antiques?.map((antique,index)=>{
         <div className={"table-container"}>
            <table className={"table"} ref={ref}> 
             <thead className={'table-head'}>
-                <tr className={'tableRow'}>
+                <tr className={'table-head-row tableRow'}>
                     <th>Actions</th>
                     <th>Id</th>
                     <th>Quantity</th>
