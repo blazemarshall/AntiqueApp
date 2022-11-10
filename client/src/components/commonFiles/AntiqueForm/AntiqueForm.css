@@ -1,5 +1,6 @@
 .inputList-container {
      display: flex; 
+     justify-content: center;
 
 }
 
@@ -51,7 +52,7 @@
     justify-content: center;
     align-items: center;
     margin:1px;
-     background-color: var(--dk-color);
+     /* background-color: var(--dk-color); */
     opacity: .9;
     color:var(--gold-color) ;
     border-radius: 12px 0 0 12px;
@@ -67,11 +68,14 @@
     opacity: .9;
     color:var(--gold-color) ;
     border-radius: 12px 0 0 12px;
+    width: 100%;
+    border:1px solid white;
 }
 .inputList-columns {
     display: flex;
     flex-direction: row;
     height: 500px;
+    justify-content: center;
 }
 
 .inputList-line {
@@ -88,8 +92,10 @@
 
 .inputList-btn {
       /* border: 3px solid yellow; */
-     display: flex;
-     justify-content:center;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content:center;
     background-color:var(--dk-color);
     color: var(--gold-color);
     border-color: var(-lt-color);
@@ -97,6 +103,9 @@
     border-radius: 10px;
     /* margin-bottom: 100px;  */
     opacity: .8;
+}
+.inputList-btn:active{
+    scale:.9;
 }
 .inputList-btn:hover {
     opacity: 1;

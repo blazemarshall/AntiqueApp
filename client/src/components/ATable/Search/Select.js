@@ -3,9 +3,9 @@ import { useState } from "react"
 export default function Select({setField,field}){
 
     const handleChange =(e)=>{
-        
         setField(e.target.value)
     }
+    
     return (
         <div className="field-select-container">
             <label className="field-select-label" htmlFor='field-select'>Choose a field : </label>

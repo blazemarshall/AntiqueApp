@@ -9,6 +9,7 @@
 
 
 :root {
+  min-width: 250px;
 /* -colors */
   --gold-color:gold;
   --lt-gold-color:rgb(255, 240, 157);
@@ -75,6 +76,11 @@
 button {
   appearance: none;
   border:none
+}
+label{
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
 table{
   border-collapse: collapse;
