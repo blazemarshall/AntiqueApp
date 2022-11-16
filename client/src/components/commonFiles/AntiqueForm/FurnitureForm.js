@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router";
-export default function FurnitureForm({submitHandler,initialFields,form,editBool,setForm,changeHandler}){
+export default function FurnitureForm({submitHandler,initialFields,form,editBool,setForm,changeHandler,categoryValue}){
     const navigate = useNavigate();
     return (
         <div className="form-container">
@@ -21,6 +21,9 @@ export default function FurnitureForm({submitHandler,initialFields,form,editBool
       <p className="inputList-label">Category: </p>  
       <p className="inputList-label">Quantity: </p>  
       <p className="inputList-label">Value: </p>  
+      <p className="inputList-label">Purchase Price: </p>  
+      <p className="inputList-label">Sell Price: </p>  
+      
       <p className="inputList-label">Material: </p>  
       <p className="inputList-label">Color: </p>  
       <p className="inputList-label">Style: </p>  
@@ -37,11 +40,14 @@ export default function FurnitureForm({submitHandler,initialFields,form,editBool
     </div>
 
     <div className="inputList-inputs-list" >
-        {editBool && <input id="id"  name="id"    type="text" placeholder="Id"          className="inputList-input" onChange={changeHandler} value={form.id}          maxLength="50"    aria-label="id input box" readOnly/>}
-        <input id="name"       name="name"        type="text" placeholder="Name"        className="inputList-input" onChange={changeHandler} value={form.name}        maxLength="50"    aria-label="name input box" />
-        <input id="category"   name="category"    type="text" placeholder="Category"    className="inputList-input" onChange={changeHandler} value={form.category}    maxLength="50"    aria-label="category input box" />
-        <input id="quantity"   name="quantity"    type="text" placeholder="Quantity"    className="inputList-input" onChange={changeHandler} value={form.quantity}    maxLength="50"    aria-label="quantity input box" />
-        <input id="value"      name="value"       type="text" placeholder="Value"       className="inputList-input" onChange={changeHandler} value={form.value}       maxLength="50"    aria-label="value input box" />
+        {editBool && <input id="id"  name="id"             type="text" placeholder="Id"                 className="inputList-input" onChange={changeHandler} value={form.id}          maxLength="50"    aria-label="id input box" readOnly/>}
+        <input id="name"            name="name"            type="text" placeholder="Name"               className="inputList-input" onChange={changeHandler} value={form.name}        maxLength="50"    aria-label="name input box" required/>
+        <input id="category"        name="category"        type="text" placeholder="Category"           className="inputList-input" onChange={changeHandler} value={categoryValue}    maxLength="50"    aria-label="category input box" required/>
+        <input id="quantity"        name="quantity"        type="text" placeholder="Quantity"           className="inputList-input" onChange={changeHandler} value={form.quantity}    maxLength="50"    aria-label="quantity input box" />
+        <input id="value"           name="value"           type="text" placeholder="Value"              className="inputList-input" onChange={changeHandler} value={form.value}       maxLength="50"    aria-label="value input box" />
+        <input id="purchasePrice"   name="purchasePrice"   type="text" placeholder="Purchase Price"     className="inputList-input" onChange={changeHandler} value={form.purchasePrice}       maxLength="50"    aria-label="purchase price input box" />
+        <input id="sellPrice"       name="sellPrice"       type="text" placeholder="Sell Price"         className="inputList-input" onChange={changeHandler} value={form.sellPrice}       maxLength="50"    aria-label="sell price input box" />
+        
         <input id="material"   name="material"    type="text" placeholder="Material"    className="inputList-input" onChange={changeHandler} value={form.material}    maxLength="50"    aria-label="material input box"/>
         <input id="color"      name="color"       type="text" placeholder="Color"       className="inputList-input" onChange={changeHandler} value={form.color}       maxLength="50"    aria-label="color input box" />
         <input id="style"      name="style"       type="text" placeholder="Style"       className="inputList-input" onChange={changeHandler} value={form.style}       maxLength="50"    aria-label="style input box" />

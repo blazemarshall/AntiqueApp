@@ -13,6 +13,9 @@ export default function Select({setField,field}){
                 <option className="field-option" value='name'>Name</option>
                 <option className="field-option" value='id'>Id</option>
                 <option className="field-option" value='category'>Category</option>
+                <option className="field-option" value='printed'>Printed</option>
+                <option className="field-option" value='genre'>Genre</option>
+                <option className="field-option" value='author'>Author</option>
                 <option className="field-option" value='material'>Material</option>
                 <option className="field-option" value='style'>Style</option>
                 <option className="field-option" value='timePeriod'>Time Period</option>
@@ -20,6 +23,10 @@ export default function Select({setField,field}){
                 <option className="field-option" value='owner'>Owner</option>
                 <option className="field-option" value='brand'>Brand</option>
                 <option className="field-option" value='model'>Model</option>
+                <option className="field-option" value='value'>Value</option>
+                <option className="field-option" value='purchasePrice'>Purchase Price</option>
+                <option className="field-option" value='sellPrice'>Sell Price</option>
+
             </select>
         </div>
     )

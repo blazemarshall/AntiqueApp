@@ -14,7 +14,17 @@ export default function SearchResults({filteredAntiques}){
                     <th className="search-th">Name</th>
                     <th className="search-th">Quantity</th>
                     <th className="search-th">Category</th>
+                    <th className="search-th">Author</th>
+                    <th className="search-th">Printed</th>
+                    <th className="search-th">Genre</th>
+                    <th className="search-th">Edition</th>
+                    <th className="search-th">Publisher</th>
+                    <th className="search-th">Type</th>
+
                     <th className="search-th">Value</th>
+                    <th className="search-th">Purchase Price</th>
+                    <th className="search-th">Sell Price</th>
+
                     <th className="search-th">Material</th>
                     <th className="search-th">Color</th>
                     <th className="search-th">Style</th>

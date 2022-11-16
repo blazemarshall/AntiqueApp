@@ -28,7 +28,9 @@
 }
 .HeadNavBar-btn:hover {
     background-color: var(--jsplit-5);
-    scale: .9;
+}
+.HeadNavBar-btn:active{
+    scale:.9;
 }
 
 .search-btn{

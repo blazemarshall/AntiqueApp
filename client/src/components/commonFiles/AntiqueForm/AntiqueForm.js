@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import './AntiqueForm.css'
 import FurnitureForm from "./FurnitureForm";
 import BookForm from "./BookForm";
-export default function AntiqueForm({submitHandler,initialFields,editBool,category}){
+export default function AntiqueForm({submitHandler,initialFields,editBool,categoryValue}){
 const [form,setForm] = useState({});
 
 useEffect(()=>{
@@ -14,11 +14,11 @@ const changeHandler = e => {
 }
 
 
-
+console.log(categoryValue,'category')
     return (
         <div>
-          { category === 'furniture' &&  <FurnitureForm changeHandler={changeHandler} submitHandler={submitHandler} initialFields={initialFields} editBool={editBool} form={form} setForm={setForm}/>}
-          { category === 'book' && <BookForm changeHandler={changeHandler} submitHandler={submitHandler} initialFields={initialFields} editBool={editBool} form={form} setForm={setForm}/>}
+          { categoryValue === 'furniture' &&  <FurnitureForm categoryValue={categoryValue} changeHandler={changeHandler} submitHandler={submitHandler} initialFields={initialFields} editBool={editBool} form={form} setForm={setForm}/>}
+          { categoryValue === 'books' && <BookForm categoryValue={categoryValue} changeHandler={changeHandler} submitHandler={submitHandler} initialFields={initialFields} editBool={editBool} form={form} setForm={setForm}/>}
         </div>
 )
 }

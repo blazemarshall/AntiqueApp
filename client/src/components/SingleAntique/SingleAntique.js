@@ -23,9 +23,10 @@ useEffect(()=>{
     fetchAntique();
 },[id])
     return(
-        <div className="single-antique-container">
+<div className="single-antique-container">
+    { antique?.category ==="furniture" && 
      <table className="table row">
-                <thead className="table-head col ">
+              <thead className="table-head col ">
                     <tr className="table-head-row col">
                     <th className="single-antique-head-th">Id</th>
                     <th className="single-antique-head-th">Name</th>
@@ -69,7 +70,51 @@ useEffect(()=>{
         <td className="table-detail single-antique-td"> {antique?.comment} </td>
         </tr>
         </tbody>
-            </table>
+            </table>}
+
+    { antique?.category ==="books" && 
+         <table className="table row">
+              <thead className="table-head col ">
+                    <tr className="table-head-row col">
+                    <th className="single-antique-head-th">Id</th>
+                    <th className="single-antique-head-th">Name/Title</th>
+                    <th className="single-antique-head-th">Quantity</th>
+                    <th className="single-antique-head-th">Author</th>
+                    <th className="single-antique-head-th">Publisher</th>
+                    <th className="single-antique-head-th">Printed</th>
+                    <th className="single-antique-head-th">Genre</th>
+                    <th className="single-antique-head-th">Type</th>
+                    <th className="single-antique-head-th">Category</th>
+                    <th className="single-antique-head-th">Value</th>
+                    <th className="single-antique-head-th">Sell Price</th>
+                    <th className="single-antique-head-th">Purchase Price</th>
+                    <th className="single-antique-head-th">Condition</th>
+                    <th className="single-antique-head-th">Origin</th>
+                    <th className="single-antique-head-th">Owner</th>
+                    <th className="single-antique-head-th">Comment</th>
+                    </tr>
+                </thead>
+                <tbody className="table-body col">
+        <tr className="table-body-row col">
+        <td className="table-detail single-antique-td"> <p>{antique?.id}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.name}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.quantity}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.Author}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.Publisher}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.Printed}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.Genre}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.Type}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.category}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.value}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.sellPrice}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.purchasePrice}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.condition}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.origin}</p></td>
+        <td className="table-detail single-antique-td"> <p>{antique?.owner}</p></td>
+        <td className="table-detail single-antique-td"> {antique?.comment} </td>
+        </tr>
+        </tbody>
+            </table>}
         </div>
     )
 }

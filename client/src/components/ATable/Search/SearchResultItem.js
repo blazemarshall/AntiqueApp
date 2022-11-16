@@ -8,7 +8,15 @@ return (<tbody className="search-tbody">
         <td className="search-td"><NameLink link={`/antiques/${antique.id}`}>{antique.name}</NameLink></td>
         <td className="search-td"> {antique.quantity} </td>
         <td className="search-td"> {antique.category} </td>
+        <td className="search-td"> {antique.author} </td>
+        <td className="search-td"> {antique.printed} </td>
+        <td className="search-td"> {antique.genre} </td>
+        <td className="search-td"> {antique.edition} </td>
+        <td className="search-td"> {antique.publisher} </td>
+        <td className="search-td"> {antique.type} </td>
         <td className="search-td"> {antique.value} </td>
+        <td className="search-td"> {antique.purchasePrice} </td>
+        <td className="search-td"> {antique.sellPrice} </td>
         <td className="search-td"> {antique.material} </td>
         <td className="search-td"> {antique.color} </td>
         <td className="search-td"> {antique.style} </td>

@@ -32,6 +32,8 @@
     max-height: 100%;
     padding:0 1.5rem;
     margin-top: 100px;
+    margin-bottom: 100px;
+    /* overflow-x:scroll; */
 }
 
 /* general styling */

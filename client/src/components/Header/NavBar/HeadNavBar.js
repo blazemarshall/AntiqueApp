@@ -7,7 +7,7 @@ export default function HeadNavBar({handlePrint,handleSearchClick}){
     <div className='HeadNavBar-container'>
       <Link className="HeadNavBar-btn" to="/antiques">Home</Link>
       <Link to='/antiques/add-antique' className='HeadNavBar-btn'>Add Antique</Link>
-      <button to='/antiques/search-antique'
+      <button 
       className='HeadNavBar-btn'
       onClick={()=>handleSearchClick()} >Search for Antique</button>
       {/* <button className="HeadNavBar-btn" onClick={""}>Download</button> */}

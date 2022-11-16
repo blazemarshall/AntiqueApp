@@ -72,13 +72,14 @@ width: 100%s;
 .field-select-container{
     display: flex;
     justify-content: center;
+    border-radius: 10px;
 }
 .field-select{
     padding:4px;
     border-radius: 10px;
     margin: 5px;
     color: var(--jsplit-1);
-    background-color: var(--lt-color);
+    background-color: var(--jsplit-4);
 }
 .field-select-label{
 color:var(--jsplit-4);

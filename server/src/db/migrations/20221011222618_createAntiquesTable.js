@@ -5,10 +5,22 @@
 exports.up = function(knex) {
     return knex.schema.createTable('antiques',function (t){
         t.increments('id').primary()
-        t.string("quantity").notNullable()
-        t.string('name').notNullable()
         t.string('category')
+
+        t.string('title')
+        t.string('author')
+        t.string('publisher')
+        t.string('printed')
+        t.string('genre')
+        t.string('type')
+        t.string('edition')
+        
+        
+        t.string("quantity")
+        t.string('name')
         t.string('value')
+        t.string('purchasePrice')
+        t.string('sellPrice')
         t.string('material')
         t.string('color')
         t.string('style')

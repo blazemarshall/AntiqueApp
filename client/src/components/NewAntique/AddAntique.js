@@ -6,16 +6,17 @@ import AntiqueForm from "../commonFiles/AntiqueForm/AntiqueForm";
 import { useNavigate } from "react-router";
 export default function AddAntique(){
 const [apiErrs,setApiErrs] = useState(null);
-const [category,setCategory] = useState('furniture')
+const [categoryValue,setCategoryValue] = useState('furniture')
 const navigate = useNavigate();
 
 
 async function createSubmitHandler(form){
         const ac= new AbortController();
         try{
-            await createAntique(form,ac.signal);
-            window.alert('Created new antique!!!')
-            navigate('/antiques')
+            await createAntique(form,ac.signal)
+            .then(window.alert('Created new antique!!!'))
+            .then(navigate('/antiques'))
+            .then(window.location.reload(false))
 
         } catch (err){
             setApiErrs(err);
@@ -26,7 +27,7 @@ async function createSubmitHandler(form){
 }
 
     const initialFields = {
-        category:'',
+        category:categoryValue,
         quantity:'',
         name:'',
         value:'',
@@ -46,7 +47,7 @@ async function createSubmitHandler(form){
      }
 
  const categoryChanger = (e) => {
-    setCategory(e.target.value)
+    setCategoryValue(e.target.value)
  }
 
     return (
@@ -57,9 +58,9 @@ async function createSubmitHandler(form){
 
         <label className="category-select-label" htmlFor="category-select">Choose a category : </label>
         
-        <select id='category-select' className='category-select' value={category} onChange={categoryChanger}>
+        <select id='category-select' className='category-select' value={categoryValue} onChange={categoryChanger}>
             <option className='category-option' value='furniture'>Furniture</option>
-            <option className='category-option' value='book'>Book</option>
+            <option className='category-option' value='books'>Books</option>
         </select>
 
         </div>
@@ -68,7 +69,7 @@ async function createSubmitHandler(form){
         submitHandler={createSubmitHandler}
         initialFields={initialFields}
         editBool={false}
-        category={category}
+        categoryValue={categoryValue}
         />
         <ErrorAlert err={apiErrs} />
         </div>

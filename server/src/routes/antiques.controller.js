@@ -1,7 +1,8 @@
 // db service
 const service = require("./antiques.service")
 const express = require("express")
-const asyncErrorBoundary = require( "../errors/asyncErrorBoundary" )
+const asyncErrorBoundary = require( "../errors/asyncErrorBoundary" );
+const ColumnCompiler = require( "knex/lib/schema/columncompiler" );
 
 
 
@@ -11,8 +12,10 @@ const asyncErrorBoundary = require( "../errors/asyncErrorBoundary" )
 
 // ------------------------------list function----------------------------
 async function list(req,res,next){
+    const category = req.params.category
+    const data = await service.list()
     try{
-        const data = await service.list()
+       
         res.json({data})
     } catch (err){
         next(err)
@@ -21,12 +24,15 @@ async function list(req,res,next){
 
 //---------------------create--------------------------------
 async function create(req,res,next){
+    console.log(req.body,'req.body')
     const data = await service.create(req.body.data);
+    console.log(data,"data controller")
     res.status(201).json({data});
 }
 
 //---------------------read---------------------------------------
 async function read(req,res,next){
+    // const category = req.body.data.category.toString()
     console.log('made it to service')
     const data = await service.read(req.params.antiqueId)
     console.log(data,"service data")

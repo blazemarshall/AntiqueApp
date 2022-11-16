@@ -5,11 +5,11 @@
 
 
 
+
 .table-container {
     /* border:3px solid yellow; */
     display: block;
     overflow-x: scroll;
-    /* margin: 0 500px; */
     justify-content: center;
     margin-bottom: 500px;
     align-items: center;
@@ -30,6 +30,14 @@
     overflow-x: auto;
 }
 
+.table-title-h1{
+    display: flex;
+background-color: black;
+opacity: .7;
+color:var(--jsplit-4);
+justify-content:center;
+}
+
 .table-head-row{
     background-color: var(--lt-dk-color);
     color:white;
@@ -37,6 +45,10 @@
     /* margin: 4px; */
 }
 
+.table-heading{
+    /* padding:15px; */
+    margin: 25px;
+}
 .table-body-row{
     /* max-height: 30px; */
     background-color: var(--dk-color);
@@ -144,4 +156,40 @@
 
 
 
-/* table commands */
+/* select */
+.category-select-table-container{
+    /* margin: 10px; */
+    padding: 20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;   
+    opacity: .8;
+    /* border-radius: 25px  25px 0 0; */
+    background-color: black;
+}
+.category-select-table{
+    margin: 25px 0 0 5px;
+    background-color: var(--jsplit-4);
+    align-content: center;
+    border-radius: 5px;
+}
+.category-select-label-table{
+    align-content: center;
+    /* margin-bottom: 5px; */
+    background-color: var(--jsplit-1);
+}
+
+.table-container-furniture{
+    /* justify-items: center; */
+    overflow-x: scroll;
+    /* padding:10px */
+}
+.table-container-books{
+    overflow-x: scroll;
+    /* padding:10px */
+}
+.table-container-allAntiques{
+    overflow-x: scroll;
+    /* padding:10px */
+}
