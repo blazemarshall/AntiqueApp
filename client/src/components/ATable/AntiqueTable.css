@@ -176,20 +176,15 @@ justify-content:center;
 }
 .category-select-label-table{
     align-content: center;
-    /* margin-bottom: 5px; */
     background-color: var(--jsplit-1);
 }
 
 .table-container-furniture{
-    /* justify-items: center; */
     overflow-x: scroll;
-    /* padding:10px */
 }
 .table-container-books{
     overflow-x: scroll;
-    /* padding:10px */
 }
 .table-container-allAntiques{
     overflow-x: scroll;
-    /* padding:10px */
 }

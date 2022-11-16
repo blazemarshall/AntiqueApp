@@ -8,7 +8,7 @@
 }
 
 .category-select {
-    background-color: orange;
+    background-color: var(--jsplit-4);
     border-radius: 5px;
     height: 30px;
     margin:0 5px;
