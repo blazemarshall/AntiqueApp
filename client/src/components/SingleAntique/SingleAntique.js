@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import { findAntique } from "../../utils/api"
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 
 
 export default function SingleAntique({setAntiqueListPage}){
     const [ apiErrs,setApiErrs] = useState(null)
     const [antique,setAntique] = useState(null);
     const {id} = useParams();
+    const navigate = useNavigate();
 useEffect(()=>{
     async function fetchAntique(){
         const ac = new AbortController();
@@ -24,6 +25,9 @@ useEffect(()=>{
 },[id])
     return(
 <div className="single-antique-container">
+<button className='table-btns-container-button edit-btn single-antique-btn' 
+            onClick={()=>navigate(`/antiques/${id}/edit-antique`)}
+            >Edit</button>
     { antique?.category ==="furniture" && 
      <table className="table row">
               <thead className="table-head col ">

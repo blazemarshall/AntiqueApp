@@ -15,6 +15,8 @@
     border: 3px solid yellow;
 }
 .searchFunction-container {
+    /* display: none; */
+    /* opacity: 0; */
     margin: 20px;
     color:white;
     display: flex;
@@ -24,8 +26,49 @@
     justify-content: center;
     flex-direction: column;
     padding: 50px,0;
-    transition:opacity 2s, translate 2s,transform 2s;
+    transition:opacity 500ms, translate 500ms,transform 500ms;
 }
+
+/* Css Transition */
+.searchFunction-div-enter{
+    /* display: none; */
+    opacity: 0;
+    /* position:absolute; */
+    transform: translateY(0%);
+}
+.searchFunction-div-enter-active{
+    /* background-color: var(--jsplit-1); */
+    /* display:block; */
+    opacity: .5;
+    transform: translateY(110%);
+    position: absolute;
+    transition:
+    opacity 800ms,
+    transform 300ms,
+    linear;
+}
+.searchFunction-div-enter-done{
+    opacity: 1;
+    }
+.searchFuntion-div-exit{
+    opacity: 1;
+}
+.searchFunction-div-exit-active{
+    opacity:0;
+    transform: translateY(110%);
+}
+.searchFunction-div-exit-done{
+    /* position: absolute; */
+    transform: translateY(0%);
+    opacity: 0;
+    
+    transition:
+    /* translate 500ms, */
+    transform 300ms,
+    opactiy 500ms,
+     linear;
+    }
+
 .search-scroll-container {
 overflow-y:scroll;
 max-height: 200px;
@@ -88,4 +131,26 @@ color:var(--jsplit-4);
 
 .field-option{
     border-radius: 5px;
+}
+
+/* search component CSStransitions */
+
+.search-component{
+    /* display: ; */
+    opacity: 0;
+}
+.search-component-enter{
+    opacity: 0;
+    display: none;
+}
+.search-component-active{
+    opacity: 1;
+    transition: opacity 300ms,transform 300ms;
+}
+.search-component-exit{
+    opacity:1;
+}
+.search-component-exit-active{
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
 }

@@ -15,8 +15,8 @@
     align-items: center;
 }
 .table-body {
-    overflow-y: scroll;
-    display: f;
+    /* overflow-y: scroll; */
+    /* display: flex; */
     /* border:3px solid yellow; */
     /* padding: 50px; */
     /* height: 100%; */
@@ -36,6 +36,7 @@ background-color: black;
 opacity: .7;
 color:var(--jsplit-4);
 justify-content:center;
+font-family: "Walter Turncoat";
 }
 
 .table-head-row{
@@ -58,7 +59,9 @@ justify-content:center;
 }
 
 .table-detail-name{
+    
     left:0px;
+    padding-left: 10px;
     border: 1px solid black;
     opacity: 1;
     background-color: var(--lt-dk-color);
@@ -75,7 +78,9 @@ justify-content:center;
 
 .table-detail {
     /* overflow-y:hidden; */
+    
     padding: 0 15px;
+    padding: auto;
     height:30px;
     max-height: 50px;
     width: auto;
@@ -94,6 +99,8 @@ justify-content:center;
 .single-antique-container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin-bottom: 100px;
 }
 .single-antique-head-th{
@@ -107,14 +114,24 @@ justify-content:center;
     height:35px ;
     align-items: center;
 }
+.single-antique-btn{
+    width:220px;
+    border-radius: 5px 5px 0 0;
+    padding: 8px 10px 0 10px;
+    margin:0 10px 0 1px;
+}
+
 
 /* button styling */
 
 .table-btns-container > button {
+    font-family: "Walter Turncoat";
+    width:auto;
     border-radius: 5px;
     min-width: 100%;
     /* border:2px solid yellow ;S */
-    padding:5px;
+    padding: 5px;
+    
 }
 .add-btn {
     display: flex;

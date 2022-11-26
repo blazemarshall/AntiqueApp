@@ -1,4 +1,5 @@
-export default function AllAntiquesTable({antiquesList,ref}){
+import React from "react";
+const AllAntiquesTable = React.forwardRef(({antiquesList},ref) =>{
     return (
         <div className={"table-container-allAntiques"}>
         <h1 className='table-title-h1'>All Antiques</h1>
@@ -36,4 +37,5 @@ export default function AllAntiquesTable({antiquesList,ref}){
          </table>
      </div>
     )
-}
+})
+export default AllAntiquesTable;

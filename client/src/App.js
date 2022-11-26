@@ -1,23 +1,18 @@
-import React,{useEffect, useState,useRef} from 'react'
-import {Link, Route, Routes, BrowserRouter as Router} from "react-router-dom"
+import React,{useEffect, useState} from 'react'
+import { BrowserRouter as Router} from "react-router-dom"
 import './App.css';
 import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import AntiqueTable from './components/ATable/AntiqueTable';
+// import Footer from "./components/Footer/Footer";
 import { listAntiques } from './utils/api';
-import AddAntique from './components/NewAntique/AddAntique';
-import NotFound from './components//NotFound'
-import EditAntique from './components/EditAntique/EditAntique';
-import {useReactToPrint} from 'react-to-print'
-import SearchFunction from './components/ATable/Search/SearchFunction';
-import SingleAntique from './components/SingleAntique/SingleAntique';
+// import {useReactToPrint} from 'react-to-print'
+import RoutePaths from './components/Routes/RoutePaths';
+import ErrorAlert from './components/commonFiles/ErrorAlert';
 
 export default function App() {
 //--------state---------------------------------------------
 const [antiquesError,setAntiquesError]= useState([])
 const [antiques,setAntiques]= useState([])
 
-const ref = useRef()
 
 //--------------------------------------------------
 useEffect(()=>{
@@ -49,6 +44,7 @@ function handleSearchClick(){
 //--------------render--------------------------------------
   return (
     <div className={"app-container"}>
+      <ErrorAlert err={antiquesError} />
     <Router>
 
     <div>
@@ -57,17 +53,7 @@ function handleSearchClick(){
       />
       {/* {searchClicked && <SearchFunction antiques={antiques}/>} */}
       <div className='content-wrapper'>
-      <Routes >
-        <Route exact path="/" element={<AntiqueTable 
-                                          searchClicked={searchClicked}
-                                          antiques={antiques}
-                                          />} />
-        <Route exact path="/antiques/add-antique" element={<AddAntique />} />
-        <Route exact path='/antiques/:id/edit-antique' element={<EditAntique />} />
-        <Route exact path="/antiques" element={<AntiqueTable antiques={antiques} searchClicked={searchClicked} />} />
-        <Route path='/antiques/:id' element={<SingleAntique  />} />
-        <Route exact path="*" element={<NotFound  />} />
-      </Routes>
+        <RoutePaths antiques={antiques} searchClicked={searchClicked}/>
       </div>
       {/* <Footer /> */}
     </div>

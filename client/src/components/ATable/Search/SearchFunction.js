@@ -1,13 +1,14 @@
 import './Search.css'
-import React,{useEffect, useState} from 'react'
+import React,{useEffect, useRef, useState} from 'react'
 import SearchResults from './SearchResults'
 import Scroll from './Scroll'
 import Select from './Select'
 
 
-export default function SearchFunction({antiques}){
+const SearchFunction = React.forwardRef(({antiques},ref) =>{
     const [searchField,setSearchField] = useState('')
     const [field,setField]=useState('name')
+
 
 const handleSearchChange = e => {
   setSearchField(e.target.value)
@@ -44,7 +45,8 @@ return antique.name.toLowerCase().includes(searchField.toLowerCase() )
 console.log(field,"field")
 // render--------------------
     return(
-        <div className="searchFunction-container">
+
+        <div className="searchFunction-container" ref={ref}>
             <Select field={field} setField={setField}/>
             <h5 className='search-h5'>Search</h5>
           
@@ -76,4 +78,6 @@ console.log(field,"field")
         </Scroll>
         </div>
     )
-}
+})
+
+export default SearchFunction;

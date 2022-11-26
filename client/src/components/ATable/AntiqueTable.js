@@ -3,7 +3,7 @@ import './TableCommands/TableCommands.css';
 import {v4 as uuidv4} from 'uuid';
 import { Link, useNavigate } from 'react-router-dom';
 import { deleteAntique } from '../../utils/api';
-import {useRef, useState } from 'react';
+import {useEffect, useRef, useState } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import NameLink from '../commonFiles/Buttons/NameLink';
 import TableCommands from './TableCommands/TableCommands';
@@ -19,6 +19,9 @@ const navigate = useNavigate()
 const [deleteErr,setDeleteErr] = useState(null);
 const [searchParams,setSearchParams] = useState("");
 const [categorySelect,setCategorySelect] = useState('all')
+
+
+useEffect(()=>{},[searchClicked])
 //----------Searches-through-table--------------
 // function searchForAntique(searchParams){}
 
